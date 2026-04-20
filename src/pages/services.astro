@@ -1,48 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore all garage door services offered by Florida Garage Pros — repair, spring replacement, opener repair, new installations, and emergency service across Florida." />
-  <title>Services – Florida Garage Pros | Garage Door Repair in Florida</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              blue: '#1e40af',
-              'blue-dark': '#1e3a8a',
-              'blue-light': '#3b82f6',
-              orange: '#f97316',
-              'orange-dark': '#ea6b0a',
-            }
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body class="font-sans text-gray-800 bg-white">
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-  <!-- Sticky Header -->
-  <header class="sticky top-0 z-50 bg-brand-blue shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2">
-        <span class="text-white font-bold text-xl tracking-tight">🏠 Florida Garage Pros</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-blue-100">
-        <a href="/" class="hover:text-white transition-colors">Home</a>
-        <a href="/services.html" class="text-white font-semibold">Services</a>
-        <a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
-      </nav>
-      <a href="tel:+15551234567" class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-4 py-2 rounded-lg text-sm transition-colors shadow">
-        📞 (555) 123-4567
-      </a>
-    </div>
-  </header>
-
+<Layout
+  title="Services – Florida Garage Pros | Garage Door Repair in Florida"
+  description="Explore all garage door services offered by Florida Garage Pros — repair, spring replacement, opener repair, new installations, and emergency service across Florida."
+  activePage="services"
+>
   <!-- Page Hero -->
   <section class="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-16 px-4 text-center">
     <h1 class="text-4xl font-extrabold mb-3">Our Garage Door Services</h1>
@@ -174,33 +138,4 @@
       📞 Call (555) 123-4567
     </a>
   </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-10 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h4 class="text-white font-bold text-lg mb-2">🏠 Florida Garage Pros</h4>
-        <p class="text-sm">Licensed &amp; insured garage door repair specialists serving all of Florida.</p>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-2">Quick Links</h4>
-        <ul class="space-y-1 text-sm">
-          <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-          <li><a href="/services.html" class="hover:text-white transition-colors">Services</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-2">Contact</h4>
-        <p class="text-sm mb-1">📞 <a href="tel:+15551234567" class="hover:text-white transition-colors">(555) 123-4567</a></p>
-        <p class="text-sm">📍 Serving all of Florida</p>
-        <p class="text-sm mt-1">Mon–Sun: 8 AM – 8 PM</p>
-      </div>
-    </div>
-    <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-800 text-center text-sm">
-      <p>&copy; 2024 Florida Garage Pros. All rights reserved.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+</Layout>
