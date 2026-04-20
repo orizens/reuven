@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Florida Garage Pros for fast garage door repair, spring replacement, or new installation. Call (555) 123-4567 or fill out our quick contact form." />
+  <title>Contact Us – Florida Garage Pros | Garage Door Repair in Florida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1e40af',
+              'blue-dark': '#1e3a8a',
+              'blue-light': '#3b82f6',
+              orange: '#f97316',
+              'orange-dark': '#ea6b0a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 bg-brand-blue shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-white font-bold text-xl tracking-tight">🏠 Florida Garage Pros</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-blue-100">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="/services.html" class="hover:text-white transition-colors">Services</a>
+        <a href="/contact.html" class="text-white font-semibold">Contact</a>
+      </nav>
+      <a href="tel:+15551234567" class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-4 py-2 rounded-lg text-sm transition-colors shadow">
+        📞 (555) 123-4567
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-16 px-4 text-center">
+    <h1 class="text-4xl font-extrabold mb-3">Contact Us</h1>
+    <p class="text-xl text-blue-200 max-w-xl mx-auto">Call, text, or send us a message — we respond quickly and are ready to help.</p>
+  </section>
+
+  <!-- Contact Content -->
+  <main class="py-16 px-4">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-brand-blue mb-6">Get In Touch</h2>
+
+        <div class="space-y-6">
+
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-100 text-brand-blue rounded-full p-3 text-xl shrink-0">📞</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Phone / Text</h3>
+              <a href="tel:+15551234567" class="text-2xl font-bold text-brand-orange hover:text-orange-600 transition-colors">
+                (555) 123-4567
+              </a>
+              <p class="text-gray-500 text-sm mt-1">Available 7 days a week, 8 AM – 8 PM</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-100 text-brand-blue rounded-full p-3 text-xl shrink-0">📍</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Service Area</h3>
+              <p class="text-gray-600 text-sm">We serve all of Florida including Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale, and surrounding areas.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-100 text-brand-blue rounded-full p-3 text-xl shrink-0">⏱️</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Response Time</h3>
+              <p class="text-gray-600 text-sm">Same-day service available. We typically respond within 30 minutes and arrive within 2 hours.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-100 text-brand-blue rounded-full p-3 text-xl shrink-0">🚨</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Emergency Service</h3>
+              <p class="text-gray-600 text-sm">Have an emergency? Call us immediately — we offer urgent dispatch for stuck or broken garage doors.</p>
+              <a href="tel:+15551234567" class="inline-block mt-2 text-sm font-bold text-brand-blue hover:underline">
+                📞 Call Emergency Line →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="mt-10">
+          <h3 class="font-semibold text-gray-900 mb-3">Our Service Area</h3>
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-blue-50 flex items-center justify-center h-56">
+            <div class="text-center text-gray-500 p-6">
+              <div class="text-4xl mb-2">🗺️</div>
+              <p class="font-medium text-gray-700">Florida Statewide Coverage</p>
+              <p class="text-sm mt-1">Miami · Orlando · Tampa · Jacksonville · and more</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 mt-2 text-center">Map integration available upon request</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <h2 class="text-2xl font-bold text-brand-blue mb-6">Send Us a Message</h2>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-5 bg-white border border-gray-200 rounded-2xl shadow-sm p-8">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name <span class="text-red-500" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Smith"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-red-500" aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 000-0000"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
+            <select id="service" name="service"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition">
+              <option value="">Select a service...</option>
+              <option value="repair">Garage Door Repair</option>
+              <option value="spring">Spring Replacement</option>
+              <option value="opener">Opener Repair / Replacement</option>
+              <option value="installation">New Door Installation</option>
+              <option value="emergency">Emergency Service</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message <span class="text-red-500" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Please describe the issue with your garage door, your address, and the best time to reach you..."
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent transition resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-4 rounded-lg text-lg transition-colors shadow">
+            Send Message →
+          </button>
+
+          <p class="text-xs text-gray-400 text-center">We respect your privacy. Your information is never shared.</p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Trust Strip -->
+  <section class="bg-blue-50 py-10 px-4">
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-6 text-center">
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">✅</span>
+        <span class="text-sm font-semibold text-gray-700">Licensed &amp; Insured</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">⚡</span>
+        <span class="text-sm font-semibold text-gray-700">Same-Day Service</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">💰</span>
+        <span class="text-sm font-semibold text-gray-700">Free Estimates</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">🛡️</span>
+        <span class="text-sm font-semibold text-gray-700">90-Day Guarantee</span>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">⭐</span>
+        <span class="text-sm font-semibold text-gray-700">5-Star Rated</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-white font-bold text-lg mb-2">🏠 Florida Garage Pros</h4>
+        <p class="text-sm">Licensed &amp; insured garage door repair specialists serving all of Florida.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm">
+          <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="/services.html" class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-2">Contact</h4>
+        <p class="text-sm mb-1">📞 <a href="tel:+15551234567" class="hover:text-white transition-colors">(555) 123-4567</a></p>
+        <p class="text-sm">📍 Serving all of Florida</p>
+        <p class="text-sm mt-1">Mon–Sun: 8 AM – 8 PM</p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-800 text-center text-sm">
+      <p>&copy; 2024 Florida Garage Pros. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
