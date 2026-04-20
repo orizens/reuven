@@ -9,7 +9,7 @@ interface Props {
 const { activePage } = Astro.props;
 ---
 
-<header class="sticky top-0 z-50 bg-brand-blue shadow-md">
+<header class="sticky top-0 z-50 bg-brand-blue/85 backdrop-blur-md shadow-md">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2">
       <Icon name="ph:house-bold" class="text-white w-5 h-5 shrink-0" />
@@ -66,7 +66,7 @@ const { activePage } = Astro.props;
   <!-- Mobile menu panel -->
   <div
     id="mobile-menu"
-    class="hidden md:hidden bg-brand-blue-dark border-t border-blue-700"
+    class="hidden md:hidden bg-brand-blue-dark/90 backdrop-blur-md border-t border-blue-700"
     aria-label="Mobile navigation"
   >
     <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">

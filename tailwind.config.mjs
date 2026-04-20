@@ -9,11 +9,11 @@ export default {
       },
       colors: {
         brand: {
-          blue: '#1e40af',
-          'blue-dark': '#1e3a8a',
-          'blue-light': '#3b82f6',
-          orange: '#f97316',
-          'orange-dark': '#ea6b0a',
+          blue: '#2b6cb4',
+          'blue-dark': '#1d5c9e',
+          'blue-light': '#5b9fd6',
+          orange: '#d97706',
+          'orange-dark': '#b45309',
         },
       },
     },

@@ -15,36 +15,54 @@ import { serviceAreas } from "../data/serviceAreas";
 >
   <!-- Hero Section -->
   <section
-    class="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-20 px-4"
+    class="relative min-h-[580px] flex items-center text-white overflow-hidden"
   >
-    <div class="max-w-4xl mx-auto text-center">
-      <h1
-        class="font-heading text-4xl md:text-5xl font-extrabold leading-tight mb-4"
-      >
-        Reliable Garage Door Repair in Florida
-      </h1>
-      <p class="text-xl md:text-2xl text-blue-200 mb-8 max-w-2xl mx-auto">
-        Licensed &amp; insured technician ready to fix your garage door today.
-        Service available across all major Florida cities.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href={site.phone.href}
-          class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg flex items-center justify-center gap-2"
+    <!-- Background photo: slick garage door exterior -->
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/images/hero-garage.jpg');"
+      role="img"
+      aria-label="Modern residential garage door exterior"
+    >
+    </div>
+    <!-- Gradient overlay for legibility -->
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-brand-blue/80 to-brand-blue-dark/85"
+    >
+    </div>
+
+    <div class="relative z-10 w-full py-24 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1
+          class="font-heading text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg"
         >
-          <Icon name="ph:phone-call-bold" class="w-5 h-5 shrink-0" />
-          Call Now – {site.phone.display}
-        </a>
-        <a
-          href="/contact"
-          class="bg-white text-brand-blue hover:bg-blue-50 font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+          Reliable Garage Door Repair in Florida
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto drop-shadow"
         >
-          Get a Free Quote
-        </a>
+          Licensed &amp; insured technician ready to fix your garage door today.
+          Service available across all major Florida cities.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={site.phone.href}
+            class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg flex items-center justify-center gap-2"
+          >
+            <Icon name="ph:phone-call-bold" class="w-5 h-5 shrink-0" />
+            Call Now – {site.phone.display}
+          </a>
+          <a
+            href="/contact"
+            class="bg-white/95 text-brand-blue hover:bg-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+          >
+            Get a Free Quote
+          </a>
+        </div>
+        <p class="mt-6 text-blue-200 text-sm drop-shadow">
+          Available All week (except Saturday) · No hidden fees · Fast response
+        </p>
       </div>
-      <p class="mt-6 text-blue-300 text-sm">
-        Available All week · No hidden fees · Fast response
-      </p>
     </div>
   </section>
 
@@ -87,6 +105,23 @@ import { serviceAreas } from "../data/serviceAreas";
     </div>
   </section>
 
+  <!-- Florida Scene Divider -->
+  <div class="relative h-52 overflow-hidden" aria-hidden="true">
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/images/florida-street.jpg');"
+    >
+    </div>
+    <div class="absolute inset-0 bg-brand-blue/45"></div>
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <p
+        class="text-white font-heading font-bold text-2xl tracking-wide drop-shadow-lg"
+      >
+        🌴 Serving Florida Homeowners Since 2010
+      </p>
+    </div>
+  </div>
+
   <!-- Why Choose Us -->
   <section class="py-16 px-4 bg-white" id="why-us">
     <div class="max-w-6xl mx-auto">
@@ -98,22 +133,34 @@ import { serviceAreas } from "../data/serviceAreas";
       <p class="text-center text-gray-500 mb-12">
         Florida homeowners trust us for a reason.
       </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          features.map((feature) => (
-            <div class="flex items-start gap-4">
-              <div class="shrink-0 mt-0.5">
-                <Icon name={feature.icon} class="w-7 h-7 text-brand-orange" />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Florida home photo -->
+        <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+          <img
+            src="/images/florida-home.jpg"
+            alt="Florida home with garage door and palm trees"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <!-- Features grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {
+            features.map((feature) => (
+              <div class="flex items-start gap-4">
+                <div class="shrink-0 mt-0.5">
+                  <Icon name={feature.icon} class="w-7 h-7 text-brand-orange" />
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-gray-900 mb-1">
+                    {feature.title}
+                  </h3>
+                  <p class="text-gray-600 text-sm">{feature.description}</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-heading font-bold text-gray-900 mb-1">
-                  {feature.title}
-                </h3>
-                <p class="text-gray-600 text-sm">{feature.description}</p>
-              </div>
-            </div>
-          ))
-        }
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>
@@ -151,8 +198,16 @@ import { serviceAreas } from "../data/serviceAreas";
   </section>
 
   <!-- Service Areas -->
-  <section class="py-16 px-4 bg-white" id="service-area">
-    <div class="max-w-4xl mx-auto text-center">
+  <section class="relative py-16 px-4 overflow-hidden" id="service-area">
+    <!-- Subtle Florida background -->
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/images/florida-bg.jpg');"
+      aria-hidden="true"
+    >
+    </div>
+    <div class="absolute inset-0 bg-white/90"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
       <h2 class="font-heading text-3xl font-bold text-brand-blue mb-2">
         Serving All of Florida
       </h2>
