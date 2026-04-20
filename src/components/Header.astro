@@ -1,0 +1,22 @@
+---
+interface Props {
+  activePage?: 'home' | 'services' | 'contact';
+}
+const { activePage } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 bg-brand-blue shadow-md">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-white font-bold text-xl tracking-tight">🏠 Florida Garage Pros</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-blue-100">
+      <a href="/" class={activePage === 'home' ? 'text-white font-semibold' : 'hover:text-white transition-colors'}>Home</a>
+      <a href="/services" class={activePage === 'services' ? 'text-white font-semibold' : 'hover:text-white transition-colors'}>Services</a>
+      <a href="/contact" class={activePage === 'contact' ? 'text-white font-semibold' : 'hover:text-white transition-colors'}>Contact</a>
+    </nav>
+    <a href="tel:+15551234567" class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-4 py-2 rounded-lg text-sm transition-colors shadow">
+      📞 (555) 123-4567
+    </a>
+  </div>
+</header>
