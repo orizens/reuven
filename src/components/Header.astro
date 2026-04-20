@@ -1,6 +1,10 @@
 ---
+import { Icon } from "astro-icon/components";
+import { navLinks } from "../data/nav";
+import { site } from "../data/site";
+
 interface Props {
-  activePage?: 'home' | 'services' | 'contact';
+  activePage?: "home" | "services" | "contact";
 }
 const { activePage } = Astro.props;
 ---
@@ -8,15 +12,104 @@ const { activePage } = Astro.props;
 <header class="sticky top-0 z-50 bg-brand-blue shadow-md">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2">
-      <span class="text-white font-bold text-xl tracking-tight">🏠 Florida Garage Pros</span>
+      <Icon name="ph:house-bold" class="text-white w-5 h-5 shrink-0" />
+      <span class="text-white font-heading font-bold text-xl tracking-tight"
+        >{site.name}</span
+      >
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-blue-100">
-      <a href="/" class={activePage === 'home' ? 'text-white font-semibold' : 'hover:text-white transition-colors'}>Home</a>
-      <a href="/services" class={activePage === 'services' ? 'text-white font-semibold' : 'hover:text-white transition-colors'}>Services</a>
-      <a href="/contact" class={activePage === 'contact' ? 'text-white font-semibold' : 'hover:text-white transition-colors'}>Contact</a>
+
+    <!-- Desktop nav -->
+    <nav
+      class="hidden md:flex items-center gap-6 text-sm font-medium text-blue-100"
+      aria-label="Main navigation"
+    >
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class={
+              activePage === link.page
+                ? "text-white font-semibold"
+                : "hover:text-white transition-colors"
+            }
+            aria-current={activePage === link.page ? "page" : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
     </nav>
-    <a href="tel:+15551234567" class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-4 py-2 rounded-lg text-sm transition-colors shadow">
-      📞 (555) 123-4567
-    </a>
+
+    <div class="flex items-center gap-2">
+      <a
+        href={site.phone.href}
+        class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold px-4 py-2 rounded-lg text-sm transition-colors shadow flex items-center gap-2"
+      >
+        <Icon name="ph:phone-call-bold" class="w-4 h-4 shrink-0" />
+        <span>{site.phone.display}</span>
+      </a>
+
+      <!-- Hamburger button — mobile only -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-white p-2 rounded-lg hover:bg-brand-blue-dark transition-colors"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <Icon name="ph:list-bold" class="w-6 h-6" id="menu-icon-open" />
+        <Icon name="ph:x-bold" class="w-6 h-6 hidden" id="menu-icon-close" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-brand-blue-dark border-t border-blue-700"
+    aria-label="Mobile navigation"
+  >
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class={
+              activePage === link.page
+                ? "text-white font-semibold py-2 px-3 rounded-lg bg-brand-blue"
+                : "text-blue-100 hover:text-white hover:bg-brand-blue py-2 px-3 rounded-lg transition-colors"
+            }
+            aria-current={activePage === link.page ? "page" : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
   </div>
 </header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("menu-icon-open");
+  const iconClose = document.getElementById("menu-icon-close");
+
+  btn?.addEventListener("click", () => {
+    const isOpen = !menu?.classList.contains("hidden");
+    menu?.classList.toggle("hidden", isOpen);
+    iconOpen?.classList.toggle("hidden", !isOpen);
+    iconClose?.classList.toggle("hidden", isOpen);
+    btn.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  // Close on nav link click
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      iconOpen?.classList.remove("hidden");
+      iconClose?.classList.add("hidden");
+      btn?.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>

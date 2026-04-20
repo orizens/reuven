@@ -1,0 +1,16 @@
+export const serviceAreas: string[] = [
+  "Miami",
+  "Orlando",
+  "Tampa",
+  "Jacksonville",
+  "Fort Lauderdale",
+  "St. Petersburg",
+  "Tallahassee",
+  "Hialeah",
+  "Port St. Lucie",
+  "Cape Coral",
+  "Fort Myers",
+  "Boca Raton",
+  "Gainesville",
+  "Clearwater",
+];
