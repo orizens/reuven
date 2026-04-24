@@ -1,14 +1,14 @@
 export const site = {
-  name: "Florida Garage Pros",
+  name: "May Garage Doors LLC",
   tagline: "Fast & Reliable Garage Door Repair in Florida",
   phone: {
     display: "(954) 914-2217",
     href: "tel:+19549142217",
   },
-  hours: "Available 7 days a week, 8 AM – 8 PM",
-  hoursShort: "Mon–Sun: 8 AM – 8 PM",
+  hours: "Available Sunday - Friday, 8 AM – 6 PM",
+  hoursShort: "Sun–Fri: 8 AM – 6 PM",
   serviceRegion: "Florida",
-  guarantee: "90-day workmanship guarantee",
-  responseTime: "typically within 30 minutes",
+  guarantee: "",
+  responseTime: "typically within 45 minutes",
   arrivalTime: "within 2 hours",
 };

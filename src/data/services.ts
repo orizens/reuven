@@ -75,9 +75,9 @@ export const services: Service[] = [
     icon: "ph:siren-bold",
     title: "Emergency Garage Door Service",
     description:
-      "Stuck inside your garage? Door won't close at night? Security is compromised? We offer emergency garage door service 7 days a week. Our technicians are dispatched quickly to get your door functional and your home secure.",
+      "Stuck inside your garage? Door won't close at night? Security is compromised? We offer emergency garage door service Sunday to Friday. Our technicians are dispatched quickly to get your door functional and your home secure.",
     bullets: [
-      "Available 7 days a week",
+      "Available Sunday - Friday",
       "Fast dispatch — 1–2 hour arrival",
       "Stuck or jammed doors",
       "Door won't close (security fix)",

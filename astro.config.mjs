@@ -4,4 +4,11 @@ import icon from 'astro-icon';
 
 export default defineConfig({
   integrations: [tailwind(), icon()],
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
+  },
 });
