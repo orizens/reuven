@@ -6,26 +6,20 @@ export interface Feature {
 
 export const features: Feature[] = [
   {
-    icon: "ph:seal-check-bold",
-    title: "Licensed & Insured",
-    description:
-      "Fully licensed Florida contractors. Your property is always protected.",
-  },
-  {
     icon: "ph:lightning-bold",
-    title: "Same-Day Service",
+    title: "Fast same-day service",
     description:
       "We show up when you need us — often within 2 hours of your call.",
   },
   {
     icon: "ph:currency-dollar-bold",
-    title: "Upfront Pricing",
+    title: "Affordable prices",
     description:
       "No surprise fees. We provide a clear estimate before any work begins.",
   },
   {
     icon: "ph:shield-check-bold",
-    title: "Satisfaction Guarantee",
+    title: "Professional and reliable",
     description: "All repairs come with a 90-day workmanship guarantee.",
   },
   {
@@ -36,7 +30,7 @@ export const features: Feature[] = [
   },
   {
     icon: "ph:star-bold",
-    title: "5-Star Rated",
+    title: "Local Technician",
     description:
       "Hundreds of satisfied customers across Florida. Read our reviews!",
   },

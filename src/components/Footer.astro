@@ -14,9 +14,8 @@ import { site } from "../data/site";
         {site.name}
       </h4>
       <p class="text-sm">
-        Licensed &amp; insured garage door repair specialists serving all of {
-          site.serviceRegion
-        }.
+        Need help today? Call or text now for fast service from our garage door
+        repair specialists serving all of {site.serviceRegion}.
       </p>
     </div>
     <div>
@@ -54,3 +53,14 @@ import { site } from "../data/site";
     <p>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/19549142217"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+  class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition-colors"
+>
+  <Icon name="ph:whatsapp-logo-fill" class="w-7 h-7" />
+</a>

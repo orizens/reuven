@@ -28,7 +28,7 @@ export const services: Service[] = [
   },
   {
     icon: "ph:spiral-bold",
-    title: "Spring Replacement",
+    title: "Broken Spring Repair",
     description:
       "A broken garage door spring is the most common reason a door stops working. Springs are under extreme tension — attempting a DIY fix is dangerous. Our certified technicians safely replace both torsion and extension springs, restoring your door to full operation.",
     bullets: [
@@ -43,7 +43,7 @@ export const services: Service[] = [
   },
   {
     icon: "ph:gear-six-bold",
-    title: "Opener Repair & Replacement",
+    title: "Opener Repair & Installation",
     description:
       "Is your garage door opener unresponsive, slow, or acting erratically? We service and replace all major brands of garage door openers, including smart openers with Wi-Fi connectivity. Get your opener working like new or upgrade to a modern model.",
     bullets: [
@@ -58,7 +58,7 @@ export const services: Service[] = [
   },
   {
     icon: "ph:door-bold",
-    title: "New Door Installations",
+    title: "New Garage Door Installation",
     description:
       "Ready for a new garage door? We carry a wide selection of residential and commercial doors in various styles, materials, and finishes. Our team handles complete installation — from removing the old door to full hardware setup and testing.",
     bullets: [
@@ -73,7 +73,7 @@ export const services: Service[] = [
   },
   {
     icon: "ph:siren-bold",
-    title: "Emergency Garage Door Service",
+    title: "Emergency Same Day Service",
     description:
       "Stuck inside your garage? Door won't close at night? Security is compromised? We offer emergency garage door service Sunday to Friday. Our technicians are dispatched quickly to get your door functional and your home secure.",
     bullets: [
